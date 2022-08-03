@@ -1,0 +1,532 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Poppins:wght@300;400&display=swap');
+@import url("../fonts/stylesheet.css");
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,300;1,400&display=swap');
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+     font-size: 16px; color: #909090
+}
+h1,h2,h3{font-family: 'Abhaya Libre', serif; margin-top: 10px; margin-bottom: 5px}
+h1{ font-size: 42px; color: #4B4B4B}
+h2{ font-size: 22px; }
+a{ color: #666; text-decoration: none}
+a:hover{color:#8FA83B}
+.text-dark3{color: #4B4B4B}
+.text-dark2{color:#909090}
+.text-dark1{color:#4B4342}
+.text-primary{ color: #8FA83B}
+.text-light{ color: #fff}
+.bg-primary { background-color: #8FA83B}
+nav{ padding: 20px 0; box-shadow: 0 2px 2px #eee;
+}
+nav .icon-shop i{margin: 0 5px; cursor: pointer;}
+nav .container
+{ 
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; align-items: center;
+    position: relative
+}
+.logo{ text-decoration: none; font-size: 20px; color: #333}
+nav .menu ul{ margin: 0; padding: 0; list-style: none; display: flex}
+nav .menu ul li{ position: relative; padding: 0 10px; border-right: 1px solid #ddd}
+nav .menu ul li a{ 
+    text-decoration: none; 
+    padding: 5px 15px; 
+    display: block; 
+    color: #909090;
+     text-transform: uppercase}
+nav .menu ul li a:hover{background: #8FA83B; color: #fff; border-radius: 5px}
+.btn-menu{ 
+    position: absolute;right:10px; top: 0; 
+    font-size: 20px; display: none; cursor: pointer; padding: 5px 10px;
+    border: 1px solid #8FA83B; border-radius: 5px; color: #4A4A4A
+  }
+nav .menu ul .sub-menu2
+{ 
+    display: block; position: absolute; 
+    width:150%; background: #fff; 
+    left: -20%; top: 130%; display: none;
+    box-shadow: 0 0 5px #ddd;z-index: 999999;
+}
+  nav .menu ul .sub-menu2 li{ text-align: center;  padding: 0 ;  border-bottom: 1px solid #FF91AF;border-right:none}
+nav .menu ul .sub-menu2 li a{ text-transform: capitalize}
+nav .menu ul .sub-menu2 li a:hover{ border-radius: 0}
+.mega-menu{ 
+    position: absolute; width: 800%; 
+    background: #fff; left: -350%; top: 100%; 
+    border: 1px solid #ddd; border-radius: 10px;
+    box-shadow: 0 5px 5px #ddd; display: none; padding:10px; z-index: 99999
+}
+.td-trang{ 
+    background: url("../images/bg-td-trang.jpg")  no-repeat center   ;  
+     min-height: 300px; text-align: center; 
+    padding-top: 20px; font-family: 'Homework';
+    color: #fff; font-size: 62px
+}
+aside section{ padding: 10px; margin: 10px}
+
+aside .td-aside{ 
+    border-radius: 50px; padding: 10px;  margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    text-align: center; color: #fff;
+    font-size: 18px; letter-spacing: 0.2em
+}
+
+aside ul{ margin: 0; padding:20px 25px; list-style: none}
+aside ul li{border-bottom: 1px solid #ddd}
+aside ul li a{ padding: 10px 25px; display: block; color: #909090; text-decoration: none;background: url("../images/dot1.png") no-repeat 5px center; transition: all .2s}
+aside ul li a:hover{ background: url("../images/dot2.png") no-repeat 10px center;
+color: #8FA83B;padding: 10px 30px;}
+.datepost{ margin-top: 0; font-style: italic; font-size: 0.8rem}
+@media (max-width:992px){
+    nav .container{ display: block}
+    nav .menu{ display: none; margin-top: 10px;        }
+    nav .menu ul{ flex-direction: column;}
+    .btn-menu{ display: block}
+    nav .menu ul li{ border-bottom: 1px dotted #666; border-left: 1px solid #ddd}
+    nav .menu ul .sub-menu2 {  width: 100%; margin-bottom: 10px;
+        position:static; display: none}
+   nav .menu ul .sub-menu2 li{  padding: 0 ; text-align: left }
+    .icon-shop{ position: absolute; right: 70px; top: 5px}
+    .icon-shop i{ font-size: 18px; margin: 0 5px}
+    .mega-menu{ width: 100%; left: 0; position: static}
+}
+main{ min-height: 400px}
+footer{ min-height: 300px; background-color: #4B4342; color: #fff}
+.nd{ background-color: cornflowerblue;min-height: 200px}
+/*-----------------------------------------------------------------------*/
+#welcom .box-wel {
+    position: relative;
+   }
+#welcom .box-wel .caption-img-wel{
+    position: absolute; 
+    width:90%; height: 90%;
+    left: 5%; top: 5%;
+    color: #fff; text-align: center; 
+    padding-top: 80px;
+    font-size: 1.5vw; opacity: 0; 
+    transition: all .5s; border-radius: 50%;
+    transform: scale(0)}
+#welcom .box-wel .wel-img{
+    border: 5px solid #FFDEA6;  
+    border-radius: 50%;
+    transition:all .5s}
+#welcom .box-wel:hover > .wel-img
+{ 
+    filter:hue-rotate(-90deg) brightness(80%) blur(1px);
+}
+#welcom .box-wel:hover > .caption-img-wel
+{ 
+    opacity: 1; transform: scale(1)
+}
+@media (max-width:992px)
+{
+   #welcom .box-wel .wel-img{ border: 6px solid #FFDEA6; }
+    #welcom .box-wel .caption-img-wel{ padding-top: 60px;}
+}
+@media (max-width:768px)
+{
+   #welcom .box-wel .wel-img
+    { border: 12px solid #FFDEA6; }
+    #welcom .box-wel .caption-img-wel
+    { font-size: 3vh; padding-top: 100px}
+}
+/*---------------------tab-content----------------*/
+
+.tab {
+  overflow: hidden;
+
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background:url("../images/tab-v1.png") no-repeat;
+    width: 180px; height: 180px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 18px;;
+    color: #5EB8C0
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+background:url("../images/tab-v2.png") no-repeat;
+}
+.tab .v2{ color:#FF91AF; background:url("../images/tab-v2.png") no-repeat; }
+.tab .v3{ color:#DFBE83; background:url("../images/tab-v3.png") no-repeat;}
+.tab .v2:hover{  background:url("../images/tab-v1.png") no-repeat;}
+/* Create an active/current tablink class */
+.tab button.active {
+ background:url("../images/tab-v1.png") no-repeat;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+
+}
+#trending .box-trend{ position: relative; border-radius: 20px; border: 1px solid #ddd; overflow: hidden}
+#trending .caption-trend{ position:absolute; background: rgba(255,255,255,.6); opacity: 0; transition: all .5s;
+width: 100%; height: 100%; left: 0; top: 0; padding-top: 50px}
+#trending .box-trend:hover >.caption-trend{ opacity: 1}
+
+/*--------------------style cho service-----------------------*/
+
+#service
+{
+background:url("../images/bg-services.jpg")no-repeat center top;
+background-size: cover;
+min-height: 700px;
+padding-top: 100px;color: #fff;
+}
+/*--------------------style cho price-----------------------*/
+
+#price
+{
+background:url("../images/bg-our-prices.jpg")no-repeat center top;
+background-size: cover;
+min-height: 700px;
+padding-top: 100px;color: #fff;
+}
+#price .card{
+	background: #5EB8C0;
+	border-radius: 20px;
+	margin-top:70px;
+}
+#price .card .anh{
+	margin-top: -50px
+}
+#price .card:hover{
+	background:rgba(102,160,5,1.00)
+	
+}
+#mau-1
+{
+	background-image: url("../images/flavour-center.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 800px
+}
+#mau-1 h3, #mau-1 p{ margin: 0}
+.img-circle{border-radius: 50%}
+@media (max-width:1000px)
+{#mau-1
+{
+	background-image: url("../images/flavour-center.jpg");
+	background-repeat: no-repeat;
+	background-position: center 70%;
+	}}
+@media (max-width:768px)
+{#mau-1
+{
+	background-image: none}}
+
+#tes{background:#fff;
+    height:auto}
+#testimonial .item img{width:20%;border-radius: 50%;border:2px solid #FBA303; display: block;margin: auto;
+	box-shadow: 0 0 5px #666;}
+#testimonial .item{ text-align: center;z-index: 1; }
+
+#tes{position: relative}
+.left-position{position:absolute; left:-180px; top:0;background-size: 100px;z-index: 2}
+.right-position{position:absolute; right:-180px; top:0;background-size: 100px;z-index: 2}
+
+@media(max-width:1200px)
+{
+	.left-position, .right-position{display: none}
+	
+}
+#special .position-relative{min-height: 350px;padding: 50px 0}
+
+#special .position-relative img{width:70%;z-index: 5;position: absolute;left: 50px;top:100px;border-radius: 30px}
+
+.bg-pink{width:60%;height:400px;background:#F835AA;position: absolute;left: 0;border-radius: 30px;z-index:4}
+.bg-tim{width:60%;height:400px;background:#B458C2;position: absolute;left: 170px;border-radius: 30px;z-index:4}
+.bg-green{width:60%;height:400px;background:#8FA83B;position: absolute;left: 0;border-radius: 30px;z-index:4}
+@media(max-width:768px)
+{
+	.bg-pink, .bg-green{width: 70%;height: 270px}
+	.bg-tim{width: 70%;height: 270px; left: 110px}
+}
+
+
+#our-standart{
+	
+	background: url("../images/about/image 27.png")
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion {
+
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.course .item{
+	color:#000;
+	width: 20%;
+}
+.course .item h4{
+	text-align: center;padding: 0 10px;
+}
+.course .item i{
+	color:#FFBE39; margin: 0 1px;
+}.course .item p{
+	color:#B30002;text-align: right;
+}
+
+
+
+@media(max-width:768px)
+{
+#story .bg-story{display: none;}
+#story .our-story{background-image: url("../images/about/our-story.jpg")}
+	#story .text-story-2{display: none}
+
+}
+
+
+
+#staff{position: relative}
+.left-staff-position{position:absolute; left:0; top:0;background-size: 100px;}
+.right-staff-position{position:absolute; right:0; top:0;background-size: 100px;}
+
+@media(max-width:768px)
+{
+#staff{position: relative}
+.left-staff-position{position:absolute; left:0; top:0;width: 30%}
+.right-staff-position{position:absolute; right:0; top:0;width: 30%}
+
+}
+
+#our-staff{position: relative}
+.left-ourstaff-position{position:absolute; left:0; top:0;width:  15%;}
+.right-our-staff-position{position:absolute; right:0; bottom:0;width:  15%;}
+
+
+#contact{position: relative}
+.left-contact-position{position:absolute; left:0; top:0;width:  15%;}
+.right-contact-position{position:absolute; right:0;bottom: 0; width: 15%;}
+
+.card{width: 250px;height:220px;
+	text-align: center;
+	border: 1px solid #8FA83B;border-radius: 10px}
+
+.contact-form input{border: 1px solid #8FA83B; border-radius:10px}
+.contact-form textarea{border: 1px solid #8FA83B;border-radius: 10px;
+width: 100%; height: 100px;margin-top: 10px}
+.btn-contact {width: 100%; margin-top: 15px}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/*----------user---------------*/
+
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background: none;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+#contact-us{background-image: url("../images/bg-form.jpg")}
+
+#contact-us .form{background: 
+rgba(249,249,249,0.38)}
+#contact-us
+
+.form .contact-right input{border: 1px solid #FFF; border-radius:2px}
+.form .contact-right textarea{border: 1px solid #FFF;border-radius: 2px;
+width: 100%; height: 100px;margin-top: 10px}
+.btn-contact-us {background: #5EB8C0;width: 100%; margin-top: 10px}
+
